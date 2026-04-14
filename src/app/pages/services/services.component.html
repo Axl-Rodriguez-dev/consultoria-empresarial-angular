@@ -1,0 +1,35 @@
+<main>
+  <section class="services-hero" aria-label="Encabezado de servicios">
+    <div class="container">
+      <h1 class="services-hero-title">Nuestros Servicios</h1>
+      <p class="services-hero-sub">
+        Explora el catálogo completo de soluciones digitales diseñadas para potenciar tu empresa.
+        Selecciona cualquier servicio para conocer todos los detalles.
+      </p>
+    </div>
+  </section>
+
+  <section class="section services-catalog" aria-label="Catálogo de servicios">
+    <div class="container">
+      <div class="services-filter">
+        <input class="filter-input" type="search" placeholder="Buscar servicio..." />
+      </div>
+
+      @if (loading()) {
+        <div class="services-grid-full">
+          <div class="skeleton-card" aria-hidden="true"></div>
+          <div class="skeleton-card" aria-hidden="true"></div>
+          <div class="skeleton-card" aria-hidden="true"></div>
+        </div>
+      } @else if (allServices().length === 0) {
+        <p class="no-results">No se encontraron servicios que coincidan con tu búsqueda.</p>
+      } @else {
+        <div class="services-grid-full" aria-live="polite">
+          @for (service of allServices(); track service.id) {
+            <app-service-card [service]="service" variant="catalog"></app-service-card>
+          }
+        </div>
+      }
+    </div>
+  </section>
+</main>

@@ -1,0 +1,96 @@
+@if (loading()) {
+  <div class="detail-loading">
+    <div class="detail-skeleton-hero"></div>
+    <div class="container" style="margin-top: 40px">
+      <div class="detail-skeleton-line"></div>
+      <div class="detail-skeleton-line" style="width: 60%"></div>
+    </div>
+  </div>
+} @else if (notFound()) {
+  <div class="detail-not-found">
+    <h2>Servicio no encontrado</h2>
+    <p>El servicio que buscas no existe o no tiene página de detalle.</p>
+    <a class="btn" routerLink="/services">
+      <span>Ver Servicios</span>
+      <span class="btn-icon">↗</span>
+    </a>
+  </div>
+} @else if (service()) {
+  <main>
+    <section class="">
+      <div class="container">
+        <span class="category-tag">{{ service()!.category }}</span>
+        <h1 class="detail-title">
+          {{ service()!.name }}<br />
+          <span class="detail-title__accent">{{ service()!.titleAccent }}</span>
+        </h1>
+        <p class="detail-lead">{{ service()!.lead }}</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container ">
+        <div class="info-main">
+          <h2 class="section-title">Visión Estratégica y Resultados Medibles</h2>
+          <p class="section-text">{{ service()!.methodology }}</p>
+
+          @if (service()!.featuresDetail.length) {
+            <div class="features-grid">
+              @for (feat of service()!.featuresDetail; track feat.title) {
+                <div class="feature-card">
+                  <span class="f-icon">{{ feat.icon }}</span>
+                  <div class="f-info">
+                    <h4>{{ feat.title }}</h4>
+                    <p>{{ feat.desc }}</p>
+                  </div>
+                </div>
+              }
+            </div>
+          }
+
+          @if (service()!.techStack.length) {
+            <div class="tech-stack">
+              <h3>Áreas de Especialidad</h3>
+              <div class="stack-grid">
+                @for (tech of service()!.techStack; track tech) {
+                  <span class="stack-badge">{{ tech }}</span>
+                }
+              </div>
+            </div>
+          }
+
+          @if (service()!.process.length) {
+            <h2 class="section-title" style="margin-top: 50px">Metodología de Implementación</h2>
+            <div class="process-grid">
+              @for (step of service()!.process; track step.step) {
+                <div class="process-item">
+                  <span class="p-number">{{ step.step }}</span>
+                  <div class="p-content">
+                    <h5>{{ step.title }}</h5>
+                    <p>{{ step.text }}</p>
+                  </div>
+                </div>
+              }
+            </div>
+          }
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section detail-cta">
+      <div class="container">
+        <div class="cta-card">
+          <h3 class="cta-card-title">¿Listo para empezar?</h3>
+          <p class="cta-card-text">Transformamos tu visión en una plataforma digital de alto rendimiento.</p>
+          <a routerLink="/contact" class="cta-start-btn">INICIAR PROYECTO</a>
+          <ul class="cta-features">
+            <li>Optimización Core Web Vitals</li>
+            <li>Diseño Adaptativo Premium</li>
+            <li>Arquitectura Escalable</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+}

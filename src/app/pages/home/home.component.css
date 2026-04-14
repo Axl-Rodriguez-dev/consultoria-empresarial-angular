@@ -1,0 +1,12 @@
+@keyframes shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position:  600px 0; }
+}
+
+.skeleton-home {
+  height: 240px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #e8edf7 25%, #f5f7fc 50%, #e8edf7 75%);
+  background-size: 600px 100%;
+  animation: shimmer 1.4s infinite linear;
+}

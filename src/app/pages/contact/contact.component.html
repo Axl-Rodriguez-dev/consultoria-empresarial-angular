@@ -1,0 +1,63 @@
+<main>
+  <header class="contact-page-header">
+    <h1>Contáctenos</h1>
+    <p>Estamos aquí para ayudarte. Envíanos un mensaje y nos pondremos en contacto contigo lo antes posible.</p>
+  </header>
+
+  <div class="contact-container">
+    <section class="contact-info">
+      <h2>Información de Contacto</h2>
+      @if (contactInfo()) {
+        <div class="info-card">
+          <div class="info-icon email-icon">📧</div>
+          <div><h3>Email</h3><p>{{ contactInfo()!.email }}</p></div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon phone-icon">📞</div>
+          <div><h3>Teléfono</h3><p>{{ contactInfo()!.telefono }}</p></div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon location-icon">📍</div>
+          <div><h3>Dirección</h3><p>{{ contactInfo()!.direccion }}</p></div>
+        </div>
+        <div class="info-card">
+          <div>
+            <h3>Horario de Atención</h3>
+            <p>Lun–Vie: {{ contactInfo()!.horario.lunes_viernes }}</p>
+            <p>Sábado: {{ contactInfo()!.horario.sabado }}</p>
+            <p>Domingo: {{ contactInfo()!.horario.domingo }}</p>
+          </div>
+        </div>
+      }
+    </section>
+
+    <section class="contact-form">
+      <h2>Envíanos un Mensaje</h2>
+      @if (submitted()) {
+        <div class="success-msg">
+          <p>✅ ¡Mensaje enviado! Nos pondremos en contacto pronto.</p>
+          <button (click)="resetForm()">Enviar otro mensaje</button>
+        </div>
+      } @else {
+        <form (ngSubmit)="onSubmit()">
+          @if (error()) {
+            <p class="form-error">{{ error() }}</p>
+          }
+          <label>Nombre Completo *</label>
+          <input type="text" [(ngModel)]="form.nombre" name="nombre" placeholder="Tu nombre" />
+
+          <label>Correo Electrónico *</label>
+          <input type="email" [(ngModel)]="form.email" name="email" placeholder="tu@email.com" />
+
+          <label>Teléfono</label>
+          <input type="text" [(ngModel)]="form.telefono" name="telefono" placeholder="+1 (234) 567-890" />
+
+          <label>Mensaje *</label>
+          <textarea [(ngModel)]="form.mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
+
+          <button type="submit">✈️ Enviar Mensaje</button>
+        </form>
+      }
+    </section>
+  </div>
+</main>

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "service-2",
+    "slug": "desarrollo-web",
+    "name": "Desarrollo Web",
+    "image": "src/web.jpg",
+    "shortDescription": "Soluciones tecnológicas modernas: sitios responsivos, e-commerce, aplicaciones web progresivas e integración de APIs para automatizar procesos y mejorar la interoperabilidad.",
+    "description": "En el área de desarrollo web, ofrecemos soluciones tecnológicas modernas que permiten a las empresas fortalecer su presencia digital y mejorar la interacción con sus usuarios. Nuestro enfoque está orientado a la creación de plataformas eficientes, seguras y escalables.",
+    "features": [
+      "Diseño y desarrollo de sitios web responsivos que garantizan una experiencia consistente en diferentes dispositivos.",
+      "Implementación de plataformas de comercio electrónico orientadas a maximizar las conversiones.",
+      "Desarrollo de aplicaciones web progresivas que combinan rendimiento, accesibilidad y facilidad de uso.",
+      "Integración de APIs para automatizar procesos, conectar sistemas y mejorar la interoperabilidad."
+    ],
+    "featured": false,
+    "hasDetail": true,
+    "category": "Estrategia & Operaciones",
+    "titleAccent": "Escalable y de Alto Impacto",
+    "lead": "No solo creamos sitios, construimos motores de crecimiento. Diseñamos ecosistemas digitales optimizados para la conversión, la velocidad y la seguridad robusta.",
+    "methodology": "Nuestro enfoque se basa en la ingeniería de precisión. Priorizamos los Core Web Vitals de Google para asegurar que tu plataforma domine los resultados de búsqueda y ofrezca una experiencia de usuario fluida en cualquier dispositivo.",
+    "techStack": ["HTML5 / SASS", "JavaScript ES6+", "React.js / Next.js", "Node.js & Express", "PostgreSQL / MongoDB", "Arquitectura Serverless", "SEO Técnico Avanzado", "Seguridad SSL & WAF"],
+    "process": [
+      { "step": "01", "title": "Estrategia", "text": "Análisis de objetivos, competencia y definición del stack tecnológico ideal." },
+      { "step": "02", "title": "Diseño UI/UX", "text": "Prototipado centrado en el usuario para garantizar una navegación intuitiva." },
+      { "step": "03", "title": "Desarrollo", "text": "Programación modular siguiendo las mejores prácticas de código limpio." },
+      { "step": "04", "title": "Despliegue", "text": "Optimización final, pruebas de carga y lanzamiento en entornos seguros." }
+    ],
+    "featuresDetail": [
+      { "icon": "🚀", "title": "Velocidad de Carga", "desc": "Optimizamos cada byte para tiempos de respuesta instantáneos." },
+      { "icon": "🛡️", "title": "Seguridad de Grado Bancario", "desc": "Protección avanzada contra ataques y manejo seguro de datos." },
+      { "icon": "📱", "title": "Mobile First", "desc": "Adaptabilidad total asegurando una estética impecable en móviles." },
+      { "icon": "📈", "title": "Conversión", "desc": "Estructuras pensadas para guiar al usuario hacia la acción comercial." }
+    ]
+  },
+  {
+    "id": "service-1",
+    "slug": "consultoria-empresarial",
+    "name": "Consultoría Empresarial",
+    "image": "src/company.png",
+    "shortDescription": "Fortalecemos la toma de decisiones mediante análisis de mercado, diseño de estrategias, optimización de procesos y planificación financiera basada en proyecciones realistas.",
+    "description": "Nuestra línea de consultoría empresarial está diseñada para fortalecer la toma de decisiones mediante información confiable y metodologías estructuradas.",
+    "features": [
+      "Análisis de mercado con evaluación de tendencias, comportamiento del consumidor y posicionamiento competitivo.",
+      "Diseño y desarrollo de estrategias empresariales alineadas con los objetivos de crecimiento.",
+      "Optimización de procesos mediante la identificación de cuellos de botella y mejora continua.",
+      "Planificación financiera basada en proyecciones realistas y escenarios de riesgo controlado."
+    ],
+    "featured": true,
+    "hasDetail": true,
+    "category": "Estrategia & Operaciones",
+    "titleAccent": "Transformación y Crecimiento",
+    "lead": "Maximizamos el valor de su organización mediante el diagnóstico preciso y la ejecución de estrategias de alto impacto. Transformamos desafíos operativos en ventajas competitivas sostenibles.",
+    "methodology": "Trabajamos bajo un modelo de consultoría basada en evidencia. No solo entregamos informes; implementamos soluciones prácticas que optimizan la cadena de valor, reducen costos operativos y preparan a su empresa para escalar en mercados globales.",
+    "techStack": ["Análisis FODA Avanzado", "Lean Six Sigma", "Optimización de Procesos", "Balanced Scorecard", "Gestión del Cambio", "Inteligencia de Negocios", "Auditoría Operativa", "Planificación Financiera"],
+    "process": [
+      { "step": "01", "title": "Diagnóstico", "text": "Identificación de cuellos de botella y brechas de eficiencia en la estructura actual." },
+      { "step": "02", "title": "Diseño Estratégico", "text": "Creación de una hoja de ruta personalizada con KPIs medibles y objetivos claros." },
+      { "step": "03", "title": "Implementación", "text": "Acompañamiento en la ejecución de cambios operativos y formación de equipos." },
+      { "step": "04", "title": "Monitoreo", "text": "Evaluación de resultados y ajustes finos para asegurar la sostenibilidad del modelo." }
+    ],
+    "featuresDetail": [
+      { "icon": "📈", "title": "Rentabilidad", "desc": "Enfoque directo en la mejora del margen operativo y ROI." },
+      { "icon": "🎯", "title": "Precisión", "desc": "Decisiones basadas en datos reales, no en suposiciones." },
+      { "icon": "🤝", "title": "Liderazgo", "desc": "Fortalecimiento de la cultura organizacional y el mando medio." },
+      { "icon": "🌍", "title": "Escalabilidad", "desc": "Estructuras preparadas para el crecimiento nacional e internacional." }
+    ]
+  },
+  {
+    "id": "service-3",
+    "slug": "enfoque-integral",
+    "name": "Enfoque Integral",
+    "image": "src/integral.jpg",
+    "shortDescription": "Combinamos análisis estratégico, implementación técnica y seguimiento continuo para medir resultados.",
+    "description": "Nuestros servicios no se limitan a la ejecución técnica o estratégica de manera aislada. Cada proyecto integra todas las áreas necesarias para garantizar resultados sostenibles.",
+    "features": [
+      "Diagnóstico inicial completo del estado actual de la organización.",
+      "Diseño e implementación de soluciones adaptadas a los objetivos específicos del negocio.",
+      "Seguimiento continuo con indicadores de rendimiento (KPIs) definidos desde el inicio.",
+      "Ajustes y mejoras iterativas para garantizar resultados sostenibles a largo plazo."
+    ],
+    "featured": false,
+    "hasDetail": true,
+    "category": null,
+    "titleAccent": null,
+    "heroGradient": null,
+    "lead": null,
+    "methodology": null,
+    "techStack": [],
+    "process": [],
+    "featuresDetail": []
+  }
+]

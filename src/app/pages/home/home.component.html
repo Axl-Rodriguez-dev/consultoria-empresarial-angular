@@ -1,0 +1,78 @@
+<main>
+  <section id="home" class="hero" aria-label="Inicio">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1 class="hero-title">Soluciones <span>Digitales</span> para tu Empresa</h1>
+        <p class="hero-subtitle">
+          Plataforma de servicios digitales orientada a fortalecer la toma de decisiones, potenciar la
+          presencia web y optimizar los procesos internos de tu organización. Explora nuestro catálogo,
+          conoce cada servicio en detalle e inicia hoy el camino hacia la transformación de tu negocio.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title section-title--accent">¿Quiénes somos?</h2>
+      <p class="section-text">
+        Somos una plataforma de servicios digitales diseñada para acompañar a las empresas en su proceso
+        de transformación y crecimiento. A través de consultoría especializada y soluciones tecnológicas
+        de vanguardia, ayudamos a organizaciones de todos los tamaños a tomar mejores decisiones, mejorar
+        su presencia digital y optimizar sus procesos internos.
+      </p>
+      <p class="section-text">
+        Nuestro modelo de trabajo combina análisis estratégico, implementación técnica y seguimiento
+        continuo. Esto nos permite medir resultados, realizar ajustes oportunos y garantizar que cada
+        proyecto genere un impacto positivo y sostenible en el tiempo.
+      </p>
+    </div>
+  </section>
+
+  <section id="services" class="section services">
+    <div class="container">
+      <h2 class="section-title section-title--center section-title--accent">Nuestros Servicios</h2>
+      @if (loading()) {
+        <div class="services-grid">
+          <div class="skeleton-home" aria-hidden="true"></div>
+          <div class="skeleton-home" aria-hidden="true"></div>
+          <div class="skeleton-home" aria-hidden="true"></div>
+        </div>
+      } @else {
+        <div class="services-grid" aria-live="polite">
+          @for (service of services(); track service.id; let i = $index) {
+            <app-service-card [service]="service" variant="home" [index]="i"></app-service-card>
+          }
+        </div>
+      }
+    </div>
+  </section>
+
+  <section id="contact" class="section cta">
+    <div class="container">
+      <h2 class="section-title section-title--accent">¿Listo para comenzar?</h2>
+      <p class="section-text">
+        La página de contacto facilita la comunicación directa entre los usuarios y nuestra plataforma,
+        permitiendo el envío de mensajes de manera rápida, clara y estructurada.
+      </p>
+      <div class="cta-grid">
+        <img
+          class="cta-img"
+          src="https://media.istockphoto.com/id/1610418910/photo/online-survey-and-digital-form-checklist-by-laptop-computer-document-management-checking.jpg?s=612x612&w=0&k=20&c=VRWaWHell9_d_PV1SS7iYdflcL4Isq4VVYrCVACY4-w="
+          alt="Listo para empezar"
+        />
+        <div class="cta-copy">
+          <p class="section-text">
+            Desde nuestra plataforma puedes explorar el catálogo de servicios, conocer en detalle cada
+            propuesta y comunicarte directamente con nuestro equipo. Estamos disponibles para acompañarte
+            en cada etapa del proceso.
+          </p>
+          <a class="btn" routerLink="/contact">
+            <span>Contáctanos</span>
+            <span class="btn-icon" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
