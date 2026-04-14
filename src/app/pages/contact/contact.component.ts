@@ -7,7 +7,7 @@ import { ContactInfo } from '../../models/models';
   selector: 'app-contact',
   imports: [FormsModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css',
+  styleUrl: './contact.component.css'
 })
 export class ContactComponent implements OnInit {
   contactInfo = signal<ContactInfo | null>(null);
@@ -21,7 +21,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getContactInfo().subscribe({
       next: (data) => this.contactInfo.set(data),
-      error: () => {},
+      error: () => {}
     });
   }
 
@@ -44,5 +44,3 @@ export class ContactComponent implements OnInit {
     this.error.set('');
   }
 }
-
-//test
